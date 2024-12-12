@@ -2,8 +2,9 @@ username = "Максим"
 title = "Grade 1"
 content = "Этап 1: Задание 1"
 status = "В разработке"
-created_date = 10-12-2024
-issue_date = 20-12-2024
+created_date = "10-12-2024"
+issue_date = "20-12-2024"
+
 
 print ("Имя пользователя:", username)
 print ("Заголовок заметки:", title)
