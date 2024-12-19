@@ -28,8 +28,10 @@ print ("Дата создания заметки:", created_date)
 
 titles = [title_1, title_2,title_3]
 
+
 note = [username,title,status,
 created_date, titles
 ]
 
 print(note)
+
