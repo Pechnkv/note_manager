@@ -1,37 +1,33 @@
+#Запрос основной информации у пользователя
 
-print ("Введите имя пользователя:")
-username = input()
-print ("Введите заголовок заметки:")
-title = input()
-print ("Введите описание заметки:")
-content = input()
-print ("Введите статус заметки:")
-status = input()
-print ("Введите дату создания заметки:")
-created_date = input()
-#issue_date = input()
-print ("Введите подзаголовки:")
+username = input("Введите имя пользователя: ")
+title = input("Введите заголовок заметки: ")
+content = input("Введите описание заметки: ")
+status = input("Введите статус заметки: ")
+created_date = input("Введите дату создания заметки в формате '11-11-2024': ")
+issue_date = input("Введите дату истечения заметки в формате '11-11-2024': ")
 
-print ("Введите подзаголовок №1:")
-title_1 = input()
-print ("Введите подзаголовок №2:")
-title_2 = input()
-print ("Введите подзаголовок №3:")
-title_3 = input()
+#Изменение формата даты
+temp_issue_date = issue_date[:5]
+temp_created_date = created_date[:5]
 
-print ("Имя пользователя:", username)
-print ("Заголовок заметки:", title)
-print ("Описание заметки:", content)
-print ("Статус заметки:", status)
-print ("Дата создания заметки:", created_date)
-#print ("Дата истечения заметки:", issue_date)
+#Запрос подзаголовков у пользователя
+print("Введите подзаголовки:")
+title_1 = input("Введите подзаголовок №1:")
+title_2 = input("Введите подзаголовок №2:")
+title_3 = input("Введите подзаголовок №3:")
 
+#Создание списка
 titles = [title_1, title_2,title_3]
 
+#Объявление словаря
+note = {"Имя пользователя: ": username,
+        "Описание заметки: ": content,
+        "Статус заметки: ": status,
+        "Дата создания заметки: ": temp_created_date,
+        "Дата редактирования заметки: ": temp_issue_date,
+        "Заголовки: ": titles}
 
-note = [username,title,status,
-created_date, titles
-]
-
+#Вывод словаря
 print(note)
 
