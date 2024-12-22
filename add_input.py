@@ -4,7 +4,7 @@ title = input("Введите заголовок заметки: ")
 content = input("Введите описание заметки: ")
 status = input("Введите статус заметки: ")
 created_date = input("Введите дату создания заметки в формате 11-11-2024: ")
-issue_date = input("Введите дату редактирования формате 11-11-2024: ")
+issue_date = input("Введите дату истечения заметки в формате 11-11-2024: ")
 temp_issue_date = issue_date[:5]
 temp_created_date = created_date[:5]
 
