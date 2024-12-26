@@ -1,22 +1,30 @@
 # Обработка дедлайнов
 import datetime
-from datetime import datetime,date
+from datetime import datetime, date, timedelta
 
+#Запрос у пользователя данных
+created_date = datetime.now()  # сегодняшняя дата
+print(f'Дата создания заметки - {created_date.strftime('%d-%m-%Y')}')  # вывод сегодняшней даты
+issue_date = input('Введите дату дедлайна в формате дд-мм-гггг: ')  #запрос у пользователя дату дедлайна
 
-datelist_1 = input('Input your date 1: ').split('.')
-datelist_1 = input('Input your date 2: ').split('.')
+#цикл предназначеный для введения даты дедлайна в случае ошибки
+while True:
+    try: #используем конструкцию try для того, чтобы в случае не верного ввода программа продолжала работать.
+        deadline = datetime.strptime(issue_date, '%d-%m-%Y')
+        print(f'Дата дедлайна {deadline.strftime('%d-%m-%Y')}')
+        time_delta = deadline - created_date
+        time_delta = int(time_delta.days) + 1
 
+#проверяем условия
+        if time_delta == 0:
+            print('Дедлайн сегодня!')
+        elif time_delta > 0:
+            print(f'Дней осталось до дедлайна: {time_delta}')
+        elif time_delta < 0:
+            print(f'{time_delta*-1}!!!Именно столько дней назад истек дедлайн!.')
+        break
 
+    except ValueError:
+        print(f'Вы ввели не правильный формат даты попробуйте еще раз')
+        issue_date = input('Введите дату дедлайна в формате дд-мм-гггг: ')
 
-# created_date = input("Введите дату создания заметки в формате 11-11-2024: ")
-# issue_date = input("Введите дату редактирования формате 11-11-2024: ")
-# temp_issue_date = issue_date[:5]
-# temp_created_date = created_date[:5]
-# print("Дата создания заметки", temp_created_date)
-# print("Дата изменения заметки", temp_issue_date)
-#
-# date_1 =
-#
-# delloing = temp_issue_date - temp_created_date
-#
-# print(delloing)

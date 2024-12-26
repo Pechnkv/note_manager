@@ -39,5 +39,7 @@ while True:
         print('Вы ввели не верный формат, попробуйте заново')
         status = input()
 
+note = {"Статус заметки: ": status}
+
 print(f"Статус вашей заметки: {status}")
 
