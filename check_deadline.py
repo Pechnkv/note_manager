@@ -11,7 +11,7 @@ issue_date = input('Введите дату дедлайна в формате �
 while True:
     try: #используем конструкцию try для того, чтобы в случае не верного ввода программа продолжала работать.
         deadline = datetime.strptime(issue_date, '%d-%m-%Y')
-        print(f'Дата дедлайна {deadline.strftime('%d-%m-%Y')}')
+        print(f'Дата дедлайна: {deadline.strftime('%d-%m-%Y')}')
         time_delta = deadline - created_date
         time_delta = int(time_delta.days) + 1
 
