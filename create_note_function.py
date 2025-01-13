@@ -31,8 +31,9 @@ def check_date ():
         except ValueError:
             print(f'Вы ввели не правильный формат даты попробуйте еще раз в формате дд-мм-гггг: ')
 
+# функция вывода словаря
 def print_note(note):
-    print('Создана новая заметка')
+    print('\nСоздана новая заметка')
     for key, value in note.items():
         print("{0}: {1}".format(key, value))
     print('\n')
@@ -40,7 +41,6 @@ def print_note(note):
 #создаем словарь и заполняем его используя функцию
 note = create_note()
 
-# выводим словарь
-for key, value in note.items():
-    print("{0}: {1}".format(key, value))
-print('\n')
+# функцией выводим словарь
+print_note(note)
+
